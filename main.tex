@@ -1,15 +1,15 @@
 % Pengaturan ukuran teks dan jenis dokumen
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 
 % Pengaturan ukuran halaman dan margin
-\usepackage[a4paper,top=30mm,left=30mm,right=20mm,bottom=20mm]{geometry}
+\usepackage[a4paper,top=3cm,left=3cm,right=2cm,bottom=2.5cm]{geometry}
 
 % Pengaturan ukuran spasi
 \usepackage[singlespacing]{setspace}
 
 % Judul dokumen
 \title{Proposal Tugas Akhir ITS}
-\author{Musk, Elon Reeve}
+\author{Abdul Azis}
 
 % Pengaturan format bahasa
 \usepackage[indonesian]{babel}
@@ -38,38 +38,38 @@
 % Pengaturan format judul bab
 \usepackage{titlesec}
 \renewcommand{\thesection}{\arabic{section}}
-\titleformat*{\section}{\normalsize\bfseries}
-\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
 \titlespacing{\section}{0ex}{3ex}{1.5ex}
 \titlespacing{\subsection}{0ex}{3ex}{1.5ex}
 
 % Isi keseluruhan dokumen
 \begin{document}
 
-  % Menonaktifkan penomoran halaman
-  \pagenumbering{gobble}
+% % Menonaktifkan penomoran halaman
+% \pagenumbering{gobble}
 
-  % Lembar pengesahan
-  \input{pengesahan/pengesahan.tex}
-  \newpage
+% Lembar pengesahan
+% \input{pengesahan/pengesahan.tex}
+\newpage
 
-  % Konten pendahuluan
-  \input{konten/1-pendahuluan.tex}
+% Konten pendahuluan
+\input{konten/1-pendahuluan.tex}
 
-  % Konten tinjauan pustaka
-  \input{konten/2-tinjauan-pustaka.tex}
+% Konten tinjauan pustaka
+\input{konten/2-tinjauan-pustaka.tex}
 
-  % Konten metodologi
-  \input{konten/3-metodologi.tex}
+% Konten metodologi
+\input{konten/3-metodologi.tex}
 
-  % Konten lainnya
-  \input{konten/4-lainnya.tex}
+% Konten lainnya
+\input{konten/4-lainnya.tex}
 
-  % Daftar pustaka
-  \section{DAFTAR PUSTAKA}
-  \renewcommand\refname{}
-  \vspace{-2ex}
-  \bibliographystyle{unsrtnat}
-  \bibliography{pustaka/pustaka.bib}
+% Daftar pustaka
+\section{DAFTAR PUSTAKA}
+\renewcommand\refname{}
+\vspace{-2ex}
+\bibliographystyle{unsrtnat}
+\bibliography{pustaka/pustaka.bib}
 
 \end{document}
