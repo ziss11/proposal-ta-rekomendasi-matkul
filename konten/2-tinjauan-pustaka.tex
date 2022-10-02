@@ -1,7 +1,6 @@
 \section{TINJAUAN PUSTAKA}
 
 \subsection{Penelitian Terdahulu}
-
 Penelitian mengenai rekomendasi mata kuliah telah di lakukan. Pada tahun 2019 Glenn Ferio, Rolly Intan, dan Silvia Rostianingsih melakukan
 penelitian mengenai sistem rekomendasi mata kuliah pilihan pada \emph{paper} yang berjudul
 \emph{Sistem Rekomendasi Mata Kuliah Pilihan Menggunakan Metode User Based Collaborative Filtering Berbasis Algoritma Adjusted Cosine Similarity}.
@@ -9,10 +8,9 @@ Input yang digunakan dalam penelitian ini adalah nilai-nilai mata kuliah yang di
 \emph{Cosine Similarity}, \emph{Adjusted Cosine Similarity}, dan model \emph{K-Nearest Neighbors}. Pada penelitian tersebut mereka mendapatkan akurasi
 pada data \emph{testing} sebesar 69.24\% untuk algoritma \emph{Cosine Similarity} dan 83.55\% untuk algoritma \emph{Adjusted Cosine Similarity}.
 
-\begin{table} [ht]
-  \centering
+\begin{table} [ht] \centering
   \counterwithin{table}{section}
-  \caption{Hasil akurasi algoritma \emph{Cosine Similarity} dan \emph{Adjusted Cosine Similarity}}
+  \caption{Hasil akurasi algoritma \emph{Cosine Similarity} dan \emph{Adjusted Cosine Similarity} {(Glenn, Rolly, \& Silvia, 2019)}}
   \vspace*{3mm}
   \includegraphics{gambar/akurasi-algoritma-cosine-similarity.png}
 \end{table}
@@ -20,25 +18,24 @@ pada data \emph{testing} sebesar 69.24\% untuk algoritma \emph{Cosine Similarity
 Dan mendapatkan akurasi pada data \emph{testing} menggunakan model \emph{K-Nearest Neighbors} dengan jumlah K = 16 sebesar 89.31\%
 dan mendapatkan Mean Absolute Error sekitar 10.75.
 
-\begin{figure} [ht]
-  \centering
+\begin{figure} [ht] \centering
   \counterwithin{figure}{section}
-  \caption{Visualisasi Mean Absolute Error model \emph{K-Nearest Neighbors}}
-  \vspace*{3mm}
   \includegraphics{gambar/mae-knn.png}
+  \vspace*{3mm}
+  \caption{Visualisasi Mean Absolute Error model \emph{K-Nearest Neighbors} {(Glenn, Rolly, \& Silvia, 2019)}}
 \end{figure}
+
 
 Pada tahun 2022 Edward Fernando, Panca Mudjiraharjo, dan Muhammad Aswin melakukan penelitian untuk membuat sistem rekomendasi
 dengan pendekatan \emph{Collacorative filtering} dan algoritma \emph{K-Means Clustering}. Dalam penelitian ini, sistem rekomendasi
 berbasis collaborative filtering dibangun dengan empat metode, yaitu \emph{jaccard distance}, \emph{euclidean distance}, \emph{cosine similiarity}, dan \emph{pearson correlation}.
 Dari pengimplementasian keempat metode tersebut, sistem mampu melakukan prediksi terkait konsentrasi prodi mahasiswa dan juga rekomendasi mata kuliah
 yang dapat diambil pada semester selanjutnya. Dari implementasi awal, didapatkan hasil bahwa metode yang paling optimal hingga yang kurang optimal
-secara berurutan adalah metode \emph{cosine similiarity}, \emph{euclidean distance}, \emph{jaccard distance}, lalu \emph{pearson correlatio}n.
+secara berurutan adalah metode \emph{cosine similiarity}, \emph{euclidean distance}, \emph{jaccard distance}, lalu \emph{pearson correlation}.
 
-\begin{table} [ht]
-  \centering
+\begin{table} [ht] \centering
   \counterwithin{table}{section}
-  \caption{Nilai Kenaikan Akurasi Pendekatan \emph{Collaborative Filtering} dengan \emph{K-Means Clustering}}
+  \caption{Nilai Kenaikan Akurasi Pendekatan \emph{Collaborative Filtering} dengan \emph{K-Means Clustering} {(Edward, Panca, \& Aswin, 2022)}}
   \vspace*{3mm}
   \begin{tabular}{|c|cc|c|}
     \hline
@@ -60,10 +57,9 @@ dan \emph{jaccard} sebesar 4.83\%. Secara keseluruhan, sistem rekomendasi mata k
 \emph{moving average} pada prediksi rekomendasi mata kuliah hingga 64.76\% menggunakan data latih yang ditentukan. Dengan nilai \emph{mean absolute error} yang dihasilkan
 pada penelitian ini, pendekatan \emph{collaborative filtering} yang paling optimal untuk perekomendasian mata kuliah jatuh pada metode \emph{cosine similiarity}.
 
-\begin{table} [ht]
-  \centering
+\begin{table} [ht] \centering
   \counterwithin{table}{section}
-  \caption{Nilai Mean Absolute Error Akurasi Mata Kuliah}
+  \caption{Nilai Mean Absolute Error Akurasi Mata Kuliah {(Edward, Panca, \& Aswin, 2022)}}
   \vspace*{3mm}
   \begin{tabular}{|c|cc|c|}
     \hline
@@ -76,7 +72,44 @@ pada penelitian ini, pendekatan \emph{collaborative filtering} yang paling optim
   \end{tabular}
 \end{table}
 
+
 \subsection{Sistem Rekomendasi}
+Sistem rekomendasi merupakan suatu sistem yang dapat memberikan informasi dan rekomendasi yang membantu user dalam membuat keputusan berdasarkan data yang telah ada sebelumnya
+  {(Edward, Panca, \& Aswin, 2022)}. Sistem rekomendasi akan memberikan rekomendasi yang berbeda kepada setiap pengguna, bukan sekedar memberikan daftar item paling banyak diminati, melainkan memberikan
+saran mengenai item-item yang mungkin sesuai untuk pengguna. Artinya, setiap pengguna akan mendapatkan rekomendasi yang berbeda, sesuai dengan profil dan minat
+pengguna tersebut {(Aditya, Wayan, \& Budi, 2015)}.
+
+Sistem ini tidak merekomendasikan item secara spesifik yang pengguna inginkan. Sistem akan merekomendasikan sejumlah item yang mungkin cocok, jadi jangan heran jika
+item yang direkomendasikan oleh sistem terkadang tidak sesuai dengan preferensi pengguna. Pada sistem rekomendasi, keluarannya adalah rekomendasi “top-N”. Sistem akan memberikan sejumlah
+rekomendasi peringkat teratas yang cocok dengan pengguna.
+
+Meskipun demikian, penentuan rekomendasi personal mensyaratkan bahwa sistem harus memiliki pengetahuan tentang pengguna. Setiap system rekomendasi harus membuat dan
+memaintain suatu model pengguna atau profil pengguna yang, misalnya, memuat informasi mengenai minat atau preferences dari pengguna {(Aditya, Wayan, \& Budi, 2015)}.
+
+\subsection{Content-based Filtering}
 
 
+\emph{Content-based Filtering} adalah jenis sistem pemberi rekomendasi yang mencoba menebak apa yang mungkin disukai pengguna berdasarkan aktivitas pengguna tersebut. \emph{Content-based Filtering}
+membuat rekomendasi dengan menggunakan kata kunci dan atribut yang ditetapkan ke objek dalam database (misalnya, item di pasar online) dan mencocokkannya dengan profil pengguna.
+Sistem rekomendasi dengan metode \emph{content-based filtering} melakukan proses learning untuk merekomendasikan item yang mirip dengan item sebelumnya
+yang disukai atau dipilih oleh user. Kemiripan item dihitung berdasarkan pada fitur-fitur yang ada pada item yang dibandingkan. Oleh karenanya, metode ini tidak bergantung
+pada situasi apakah item tersebut merupakan item baru {(yang belum pernah dipilih oleh pengguna manapun)} maupun bukan item baru. Konten yang menjadi obyek \emph{learning} pada
+metode ini umumnya adalah informasi fitur mengenai item yang tersedia, namun pada perkembangannya, profil pengguna juga dapat menjadi content yang dipelajari
+kemiripannya {(Aditya, Wayan, \& Budi, 2015)}.
+
+Sistem akan memilih dan melakukan peringkat item berdasarkan kesamaan profil pengguna dan profil item.Kesamaan antara representasi dari pengguna dan representasi dari
+item akan didasarkan pada prinsip kedekatan yang menyatakan bahwa jarak dari dua deskripsi item secara langsung berkaitan dengan kesamaan mereka (Putri, 2019).
+Misalnya, jika pengguna memiliki positif menilai film yang termasuk dalam genre komedi, maka sistem dapat belajar untuk
+merekomendasikan film lain dari genre ini {(Ricci, Lior, Bracha \& Paul, 2011)}.
+
+
+\subsection{Collaborative Filtering}
+
+
+
+\subsection{Decision Tree}
+
+Decision tree merupakan algoritma \emph{supervised learning} yang dapat melakukan tugas klasifikasi maupun regresi. Algoritma ini merupakan sebuah metode kecerdasan buatan yang berbentuk pohon dimana pada setiap cabang memiliki pilihan serta alternatif dengan daun yang menyatakan keputusan yang dipilih.
+\emph{Decision tree} banyak digunakan karena dapat menggabungkan sebuah pola atau informasi kedalam sebuah bentu pohon keputusan {(Dwita, Agus \& Rizki 2022)}. \emph{Decision Tree} digunakan untuk mempelajari klasifikasi dan prediksi pola dari data dan menggambarkan relasi dari variabel attribut x dan variabel target y dalam bentuk pohon {(Ye, 2014)}.
+Pada umumnya, decision tree classifiers melakukan analisa dan konversi data menjadi decision tree dan sekumpulan aturan {(Aditya, Wayan, \& Budi, 2015)}.
 

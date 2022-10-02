@@ -2,7 +2,7 @@
 \documentclass[12pt]{article}
 
 % Pengaturan ukuran halaman dan margin
-\usepackage[a4paper,top=3cm,left=3cm,right=2cm,bottom=2.5cm]{geometry}
+\usepackage[a4paper,top=30mm,left=30mm,right=20mm,bottom=25mm]{geometry}
 
 % Pengaturan ukuran spasi
 \usepackage[singlespacing]{setspace}
@@ -20,11 +20,11 @@
 % Pengaturan jenis karakter
 \usepackage[utf8]{inputenc}
 
-% Pengaturan ukuran indentasi
-\setlength{\parindent}{2em}
-
 % Package lainnya
+\usepackage[skip=10pt plus1pt, indent=2em]{parskip}
 \usepackage{chngcntr}
+\usepackage{mathptmx}
+\usepackage{times}
 \usepackage{etoolbox} % Mengubah fungsi default
 \usepackage{enumitem} % Pembuatan list
 \usepackage{lipsum} % Pembuatan template kalimat
@@ -64,12 +64,11 @@
 \input{konten/3-metodologi.tex}
 
 % Konten lainnya
-\input{konten/4-lainnya.tex}
+% \input{konten/4-lainnya.tex}
 
 % Daftar pustaka
 \section{DAFTAR PUSTAKA}
 \renewcommand\refname{}
-\vspace{-2ex}
 \bibliographystyle{unsrtnat}
 \bibliography{pustaka/pustaka.bib}
 
