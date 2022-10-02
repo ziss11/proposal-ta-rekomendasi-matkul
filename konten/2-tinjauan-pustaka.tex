@@ -3,7 +3,7 @@
 \subsection{Penelitian Terdahulu}
 Penelitian mengenai rekomendasi mata kuliah telah di lakukan. Pada tahun 2019 Glenn Ferio, Rolly Intan, dan Silvia Rostianingsih melakukan
 penelitian mengenai sistem rekomendasi mata kuliah pilihan pada \emph{paper} yang berjudul
-\emph{Sistem Rekomendasi Mata Kuliah Pilihan Menggunakan Metode User Based Collaborative Filtering Berbasis Algoritma Adjusted Cosine Similarity}.
+\emph{Sistem Rekomendasi Mata Kuliah Pilihan Menggunakan Metode pengguna Based Collaborative Filtering Berbasis Algoritma Adjusted Cosine Similarity}.
 Input yang digunakan dalam penelitian ini adalah nilai-nilai mata kuliah yang didapatkan oleh mahasiswa. Pada penelitian ini mereka menggunakan algoritma
 \emph{Cosine Similarity}, \emph{Adjusted Cosine Similarity}, dan model \emph{K-Nearest Neighbors}. Pada penelitian tersebut mereka mendapatkan akurasi
 pada data \emph{testing} sebesar 69.24\% untuk algoritma \emph{Cosine Similarity} dan 83.55\% untuk algoritma \emph{Adjusted Cosine Similarity}.
@@ -72,9 +72,13 @@ pada penelitian ini, pendekatan \emph{collaborative filtering} yang paling optim
   \end{tabular}
 \end{table}
 
+\subsection{Machine Learning}
+\emph{Machine Learning} sejenis kecerdasan buatan yang memungkinkan perangkat lunak untuk menjadi lebih akurat dalam memprediksi keluaran
+tanpa harus memprogram secara eksplisit untuk melakukannya. Algoritma \emph{machine learning} menggunakan data riwayat sebagai input untuk
+memprediksi keluaran baru atau menemukan pola pada data.
 
 \subsection{Sistem Rekomendasi}
-Sistem rekomendasi merupakan suatu sistem yang dapat memberikan informasi dan rekomendasi yang membantu user dalam membuat keputusan berdasarkan data yang telah ada sebelumnya
+Sistem rekomendasi merupakan suatu sistem yang dapat memberikan informasi dan rekomendasi yang membantu pengguna dalam membuat keputusan berdasarkan data yang telah ada sebelumnya
   {(Edward, Panca, \& Aswin, 2022)}. Sistem rekomendasi akan memberikan rekomendasi yang berbeda kepada setiap pengguna, bukan sekedar memberikan daftar item paling banyak diminati, melainkan memberikan
 saran mengenai item-item yang mungkin sesuai untuk pengguna. Artinya, setiap pengguna akan mendapatkan rekomendasi yang berbeda, sesuai dengan profil dan minat
 pengguna tersebut {(Aditya, Wayan, \& Budi, 2015)}.
@@ -87,12 +91,10 @@ Meskipun demikian, penentuan rekomendasi personal mensyaratkan bahwa sistem haru
 memaintain suatu model pengguna atau profil pengguna yang, misalnya, memuat informasi mengenai minat atau preferences dari pengguna {(Aditya, Wayan, \& Budi, 2015)}.
 
 \subsection{Content-based Filtering}
-
-
 \emph{Content-based Filtering} adalah jenis sistem pemberi rekomendasi yang mencoba menebak apa yang mungkin disukai pengguna berdasarkan aktivitas pengguna tersebut. \emph{Content-based Filtering}
 membuat rekomendasi dengan menggunakan kata kunci dan atribut yang ditetapkan ke objek dalam database (misalnya, item di pasar online) dan mencocokkannya dengan profil pengguna.
 Sistem rekomendasi dengan metode \emph{content-based filtering} melakukan proses learning untuk merekomendasikan item yang mirip dengan item sebelumnya
-yang disukai atau dipilih oleh user. Kemiripan item dihitung berdasarkan pada fitur-fitur yang ada pada item yang dibandingkan. Oleh karenanya, metode ini tidak bergantung
+yang disukai atau dipilih oleh pengguna. Kemiripan item dihitung berdasarkan pada fitur-fitur yang ada pada item yang dibandingkan. Oleh karenanya, metode ini tidak bergantung
 pada situasi apakah item tersebut merupakan item baru {(yang belum pernah dipilih oleh pengguna manapun)} maupun bukan item baru. Konten yang menjadi obyek \emph{learning} pada
 metode ini umumnya adalah informasi fitur mengenai item yang tersedia, namun pada perkembangannya, profil pengguna juga dapat menjadi content yang dipelajari
 kemiripannya {(Aditya, Wayan, \& Budi, 2015)}.
@@ -100,16 +102,22 @@ kemiripannya {(Aditya, Wayan, \& Budi, 2015)}.
 Sistem akan memilih dan melakukan peringkat item berdasarkan kesamaan profil pengguna dan profil item.Kesamaan antara representasi dari pengguna dan representasi dari
 item akan didasarkan pada prinsip kedekatan yang menyatakan bahwa jarak dari dua deskripsi item secara langsung berkaitan dengan kesamaan mereka (Putri, 2019).
 Misalnya, jika pengguna memiliki positif menilai film yang termasuk dalam genre komedi, maka sistem dapat belajar untuk
-merekomendasikan film lain dari genre ini {(Ricci, Lior, Bracha \& Paul, 2011)}.
+merekomendasikan film lain dari genre ini {(Ricci et al., 2011)}.
 
 
 \subsection{Collaborative Filtering}
+\emph{Collaborative Filtering} adalah suatu konsep dimana opini dari pengguna lain yang ada digunakan untuk memprediksi item yang mungkin disukai/diminati oleh seorang pengguna {(Ricci et al., 2011)}.
+\emph{Collaborative filtering} bekerja dengan membuat suatu \emph{database} yang berisi item \emph{preferences} dari pengguna. Sebagai contoh, pengguna A dicocokkan terhadap data yang ada di \emph{database} untuk menemukan
+\emph{neighbor}, yaitu pengguna lain yang memiliki kemiripan \emph{preference} dengan pengguna A. Dari kecocokan yang didapatkan, pengguna A akan diberikan rekomendasi item yang sebelumnya pernah dipilih oleh neighbor dari
+pengguna A. \emph{Collaborative filtering} mampu memberikan rekomendasi yang lebih dari sekedar kemiripan item, melainkan dapat memberikan rekomendasi dengan mempelajari selera pengguna dan mencari pengguna yang memiliki selera yang kurang lebih sama.{(Aditya, Wayan, \& Budi, 2015)}.
 
+Pada implementasi \emph{Collaborative filtering} dalam sistem rekomendasi mata kuliah pilihan, data yang dibandingkan akan disimpan dalam sebuah matriks dua dimensi dimana dimensi dari y atau baris akan menyatakan mahasiswa dan dimensi x atau kolom akan menyatakan mata kuliah
+  {(Glenn, Rolly, \& Silvia, 2019)}.
 
 
 \subsection{Decision Tree}
-
-Decision tree merupakan algoritma \emph{supervised learning} yang dapat melakukan tugas klasifikasi maupun regresi. Algoritma ini merupakan sebuah metode kecerdasan buatan yang berbentuk pohon dimana pada setiap cabang memiliki pilihan serta alternatif dengan daun yang menyatakan keputusan yang dipilih.
-\emph{Decision tree} banyak digunakan karena dapat menggabungkan sebuah pola atau informasi kedalam sebuah bentu pohon keputusan {(Dwita, Agus \& Rizki 2022)}. \emph{Decision Tree} digunakan untuk mempelajari klasifikasi dan prediksi pola dari data dan menggambarkan relasi dari variabel attribut x dan variabel target y dalam bentuk pohon {(Ye, 2014)}.
-Pada umumnya, decision tree classifiers melakukan analisa dan konversi data menjadi decision tree dan sekumpulan aturan {(Aditya, Wayan, \& Budi, 2015)}.
+Decision tree merupakan algoritma \emph{supervised learning} yang dapat melakukan tugas klasifikasi maupun regresi. Algoritma ini merupakan sebuah metode kecerdasan buatan yang berbentuk pohon dimana pada setiap cabang memiliki
+pilihan serta alternatif dengan daun yang menyatakan keputusan yang dipilih. \emph{Decision tree} banyak digunakan karena dapat menggabungkan sebuah pola atau informasi kedalam sebuah bentu pohon keputusan {(Dwita, Agus \& Rizki 2022)}.
+\emph{Decision Tree} digunakan untuk mempelajari klasifikasi dan prediksi pola dari data dan menggambarkan relasi dari variabel attribut x dan variabel target y dalam bentuk pohon {(Ye, 2014)}. Pada umumnya, decision tree classifiers
+melakukan analisa dan konversi data menjadi decision tree dan sekumpulan aturan {(Aditya, Wayan, \& Budi, 2015)}.
 
