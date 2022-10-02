@@ -1,9 +1,82 @@
 \section{TINJAUAN PUSTAKA}
 
-% Ubah konten-konten berikut sesuai dengan isi dari tinjauan pustaka
-
 \subsection{Penelitian Terdahulu}
 
+Penelitian mengenai rekomendasi mata kuliah telah di lakukan. Pada tahun 2019 Glenn Ferio, Rolly Intan, dan Silvia Rostianingsih melakukan
+penelitian mengenai sistem rekomendasi mata kuliah pilihan pada \emph{paper} yang berjudul
+\emph{Sistem Rekomendasi Mata Kuliah Pilihan Menggunakan Metode User Based Collaborative Filtering Berbasis Algoritma Adjusted Cosine Similarity}.
+Input yang digunakan dalam penelitian ini adalah nilai-nilai mata kuliah yang didapatkan oleh mahasiswa. Pada penelitian ini mereka menggunakan algoritma
+\emph{Cosine Similarity}, \emph{Adjusted Cosine Similarity}, dan model \emph{K-Nearest Neighbors}. Pada penelitian tersebut mereka mendapatkan akurasi
+pada data \emph{testing} sebesar 69.24\% untuk algoritma \emph{Cosine Similarity} dan 83.55\% untuk algoritma \emph{Adjusted Cosine Similarity}.
 
-\subsection{Anti Gravitasi}
+\begin{table} [ht]
+  \centering
+  \counterwithin{table}{section}
+  \caption{Hasil akurasi algoritma \emph{Cosine Similarity} dan \emph{Adjusted Cosine Similarity}}
+  \vspace*{3mm}
+  \includegraphics{gambar/akurasi-algoritma-cosine-similarity.png}
+\end{table}
+
+Dan mendapatkan akurasi pada data \emph{testing} menggunakan model \emph{K-Nearest Neighbors} dengan jumlah K = 16 sebesar 89.31\%
+dan mendapatkan Mean Absolute Error sekitar 10.75.
+
+\begin{figure} [ht]
+  \centering
+  \counterwithin{figure}{section}
+  \caption{Visualisasi Mean Absolute Error model \emph{K-Nearest Neighbors}}
+  \vspace*{3mm}
+  \includegraphics{gambar/mae-knn.png}
+\end{figure}
+
+Pada tahun 2022 Edward Fernando, Panca Mudjiraharjo, dan Muhammad Aswin melakukan penelitian untuk membuat sistem rekomendasi
+dengan pendekatan \emph{Collacorative filtering} dan algoritma \emph{K-Means Clustering}. Dalam penelitian ini, sistem rekomendasi
+berbasis collaborative filtering dibangun dengan empat metode, yaitu \emph{jaccard distance}, \emph{euclidean distance}, \emph{cosine similiarity}, dan \emph{pearson correlation}.
+Dari pengimplementasian keempat metode tersebut, sistem mampu melakukan prediksi terkait konsentrasi prodi mahasiswa dan juga rekomendasi mata kuliah
+yang dapat diambil pada semester selanjutnya. Dari implementasi awal, didapatkan hasil bahwa metode yang paling optimal hingga yang kurang optimal
+secara berurutan adalah metode \emph{cosine similiarity}, \emph{euclidean distance}, \emph{jaccard distance}, lalu \emph{pearson correlatio}n.
+
+\begin{table} [ht]
+  \centering
+  \counterwithin{table}{section}
+  \caption{Nilai Kenaikan Akurasi Pendekatan \emph{Collaborative Filtering} dengan \emph{K-Means Clustering}}
+  \vspace*{3mm}
+  \begin{tabular}{|c|cc|c|}
+    \hline
+    \multirow{2}{*}{Metode} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Moving Average Akurasi \\ MK\end{tabular}} & \multirow{2}{*}{Kenaikan Akurasi}                                  \\ \cline{2-3}
+                            & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Sebelum \\ K-means\end{tabular}}           & \begin{tabular}[c]{@{}c@{}}Sesusah\\ K-Means\end{tabular} &        \\ \hline
+    Jaccard                 & \multicolumn{1}{c|}{51.18\%}                                                              & 53.66\%                                                   & 4.83\% \\ \hline
+    Euclidean Distance      & \multicolumn{1}{c|}{56.44\%}                                                              & 62.04\%                                                   & 9.92\% \\ \hline
+    Cosine Similiarity      & \multicolumn{1}{c|}{59.25\%}                                                              & 64.76\%                                                   & 9.30\% \\ \hline
+    Pearson Correlation     & \multicolumn{1}{c|}{40.83\%}                                                              & 43.71\%                                                   & 7.05\% \\ \hline
+  \end{tabular}
+\end{table}
+
+Proses optimalisasi hasil rekomendasi mata kuliah pada penelitian ini dilakukan dengan melakukan seleksi rekomendasi berdasarkan tabel keputusan
+yang dioleh menggunakan metode \emph{K-Means Clustering}. \emph{K-Means Clustering} mampu melakukan klasterisasi dari seluruh mata kuliah yang muncul dalam rekomendasi
+dan memberikan label untuk mana mata kuliah yang direkomendasikan dan tidak direkomendasikan. Pada pengimplementasiannya, tabel keputusan \emph{K-Means Clustering}
+mampu meningkatkan nilai akurasi \emph{moving average} pada setiap metode pendekatan \emph{collaborative filtering} dengan persentase peningkatan akurasi secara berurutan
+dari yang paling optimal hingga kurang optimal yaitu \emph{euclidean distance} sebesar 9.92\%, \emph{cosine similiarity} sebesar 9.30\%, \emph{pearson correlation} sebesar 7.05\%,
+dan \emph{jaccard} sebesar 4.83\%. Secara keseluruhan, sistem rekomendasi mata kuliah ini mampu melakukan prediksi konsentrasi mahasiswa hingga 84.78\% dan akurasi
+\emph{moving average} pada prediksi rekomendasi mata kuliah hingga 64.76\% menggunakan data latih yang ditentukan. Dengan nilai \emph{mean absolute error} yang dihasilkan
+pada penelitian ini, pendekatan \emph{collaborative filtering} yang paling optimal untuk perekomendasian mata kuliah jatuh pada metode \emph{cosine similiarity}.
+
+\begin{table} [ht]
+  \centering
+  \counterwithin{table}{section}
+  \caption{Nilai Mean Absolute Error Akurasi Mata Kuliah}
+  \vspace*{3mm}
+  \begin{tabular}{|c|cc|c|}
+    \hline
+    \multirow{2}{*}{Metode} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Moving Average Akurasi \\ MK\end{tabular}} & \multirow{2}{*}{Kenaikan Akurasi}                                  \\ \cline{2-3}
+                            & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Sebelum \\ K-means\end{tabular}}           & \begin{tabular}[c]{@{}c@{}}Sesusah\\ K-Means\end{tabular} &        \\ \hline
+    Jaccard                 & \multicolumn{1}{c|}{51.18\%}                                                              & 53.66\%                                                   & 4.83\% \\ \hline
+    Euclidean Distance      & \multicolumn{1}{c|}{56.44\%}                                                              & 62.04\%                                                   & 9.92\% \\ \hline
+    Cosine Similiarity      & \multicolumn{1}{c|}{59.25\%}                                                              & 64.76\%                                                   & 9.30\% \\ \hline
+    Pearson Correlation     & \multicolumn{1}{c|}{40.83\%}                                                              & 43.71\%                                                   & 7.05\% \\ \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Sistem Rekomendasi}
+
+
 
