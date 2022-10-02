@@ -21,10 +21,10 @@
 \usepackage[utf8]{inputenc}
 
 % Package lainnya
-\usepackage[skip=10pt plus1pt, indent=2em]{parskip}
 \usepackage{chngcntr}
 \usepackage{mathptmx}
 \usepackage{times}
+\usepackage{bookmark}
 \usepackage{etoolbox} % Mengubah fungsi default
 \usepackage{enumitem} % Pembuatan list
 \usepackage{lipsum} % Pembuatan template kalimat
@@ -47,8 +47,8 @@
 % Isi keseluruhan dokumen
 \begin{document}
 
-% % Menonaktifkan penomoran halaman
-% \pagenumbering{gobble}
+% Menonaktifkan penomoran halaman
+\pagenumbering{gobble}
 
 % Lembar pengesahan
 \input{pengesahan/pengesahan.tex}
@@ -69,7 +69,7 @@
 % Daftar pustaka
 \section{DAFTAR PUSTAKA}
 \renewcommand\refname{}
+\vspace{-2ex}
 \bibliographystyle{unsrtnat}
 \bibliography{pustaka/pustaka.bib}
-
 \end{document}

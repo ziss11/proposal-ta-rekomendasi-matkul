@@ -10,7 +10,7 @@ pada data \emph{testing} sebesar 69.24\% untuk algoritma \emph{Cosine Similarity
 
 \begin{table} [ht] \centering
   \counterwithin{table}{section}
-  \caption{Hasil akurasi algoritma \emph{Cosine Similarity} dan \emph{Adjusted Cosine Similarity} {(Glenn, Rolly, \& Silvia, 2019)}}
+  \caption{Hasil akurasi algoritma \emph{Cosine Similarity} dan \emph{Adjusted Cosine Similarity} \citep{cosineSimilarity}}
   \vspace*{3mm}
   \includegraphics{gambar/akurasi-algoritma-cosine-similarity.png}
 \end{table}
@@ -22,7 +22,7 @@ dan mendapatkan Mean Absolute Error sekitar 10.75.
   \counterwithin{figure}{section}
   \includegraphics{gambar/mae-knn.png}
   \vspace*{3mm}
-  \caption{Visualisasi Mean Absolute Error model \emph{K-Nearest Neighbors} {(Glenn, Rolly, \& Silvia, 2019)}}
+  \caption{Visualisasi Mean Absolute Error model \emph{K-Nearest Neighbors} \citep{cosineSimilarity}}
 \end{figure}
 
 
@@ -35,7 +35,7 @@ secara berurutan adalah metode \emph{cosine similiarity}, \emph{euclidean distan
 
 \begin{table} [ht] \centering
   \counterwithin{table}{section}
-  \caption{Nilai Kenaikan Akurasi Pendekatan \emph{Collaborative Filtering} dengan \emph{K-Means Clustering} {(Edward, Panca, \& Aswin, 2022)}}
+  \caption{Nilai Kenaikan Akurasi Pendekatan \emph{Collaborative Filtering} dengan \emph{K-Means Clustering} \citep{clustering}}
   \vspace*{3mm}
   \begin{tabular}{|c|cc|c|}
     \hline
@@ -59,7 +59,7 @@ pada penelitian ini, pendekatan \emph{collaborative filtering} yang paling optim
 
 \begin{table} [ht] \centering
   \counterwithin{table}{section}
-  \caption{Nilai Mean Absolute Error Akurasi Mata Kuliah {(Edward, Panca, \& Aswin, 2022)}}
+  \caption{Nilai Mean Absolute Error Akurasi Mata Kuliah \citep{clustering}}
   \vspace*{3mm}
   \begin{tabular}{|c|cc|c|}
     \hline
@@ -81,14 +81,14 @@ memprediksi keluaran baru atau menemukan pola pada data.
 Sistem rekomendasi merupakan suatu sistem yang dapat memberikan informasi dan rekomendasi yang membantu pengguna dalam membuat keputusan berdasarkan data yang telah ada sebelumnya
   {(Edward, Panca, \& Aswin, 2022)}. Sistem rekomendasi akan memberikan rekomendasi yang berbeda kepada setiap pengguna, bukan sekedar memberikan daftar item paling banyak diminati, melainkan memberikan
 saran mengenai item-item yang mungkin sesuai untuk pengguna. Artinya, setiap pengguna akan mendapatkan rekomendasi yang berbeda, sesuai dengan profil dan minat
-pengguna tersebut {(Aditya, Wayan, \& Budi, 2015)}.
+pengguna tersebut \citep{contentBasedXCollaborative}.
 
 Sistem ini tidak merekomendasikan item secara spesifik yang pengguna inginkan. Sistem akan merekomendasikan sejumlah item yang mungkin cocok, jadi jangan heran jika
 item yang direkomendasikan oleh sistem terkadang tidak sesuai dengan preferensi pengguna. Pada sistem rekomendasi, keluarannya adalah rekomendasi “top-N”. Sistem akan memberikan sejumlah
 rekomendasi peringkat teratas yang cocok dengan pengguna.
 
 Meskipun demikian, penentuan rekomendasi personal mensyaratkan bahwa sistem harus memiliki pengetahuan tentang pengguna. Setiap system rekomendasi harus membuat dan
-memaintain suatu model pengguna atau profil pengguna yang, misalnya, memuat informasi mengenai minat atau preferences dari pengguna {(Aditya, Wayan, \& Budi, 2015)}.
+memaintain suatu model pengguna atau profil pengguna yang, misalnya, memuat informasi mengenai minat atau preferences dari pengguna \citep{contentBasedXCollaborative}.
 
 \subsection{Content-based Filtering}
 \emph{Content-based Filtering} adalah jenis sistem pemberi rekomendasi yang mencoba menebak apa yang mungkin disukai pengguna berdasarkan aktivitas pengguna tersebut. \emph{Content-based Filtering}
@@ -97,27 +97,27 @@ Sistem rekomendasi dengan metode \emph{content-based filtering} melakukan proses
 yang disukai atau dipilih oleh pengguna. Kemiripan item dihitung berdasarkan pada fitur-fitur yang ada pada item yang dibandingkan. Oleh karenanya, metode ini tidak bergantung
 pada situasi apakah item tersebut merupakan item baru {(yang belum pernah dipilih oleh pengguna manapun)} maupun bukan item baru. Konten yang menjadi obyek \emph{learning} pada
 metode ini umumnya adalah informasi fitur mengenai item yang tersedia, namun pada perkembangannya, profil pengguna juga dapat menjadi content yang dipelajari
-kemiripannya {(Aditya, Wayan, \& Budi, 2015)}.
+kemiripannya \citep{contentBasedXCollaborative}.
 
 Sistem akan memilih dan melakukan peringkat item berdasarkan kesamaan profil pengguna dan profil item.Kesamaan antara representasi dari pengguna dan representasi dari
 item akan didasarkan pada prinsip kedekatan yang menyatakan bahwa jarak dari dua deskripsi item secara langsung berkaitan dengan kesamaan mereka (Putri, 2019).
 Misalnya, jika pengguna memiliki positif menilai film yang termasuk dalam genre komedi, maka sistem dapat belajar untuk
-merekomendasikan film lain dari genre ini {(Ricci et al., 2011)}.
+merekomendasikan film lain dari genre ini \citep{handbook}.
 
 
 \subsection{Collaborative Filtering}
-\emph{Collaborative Filtering} adalah suatu konsep dimana opini dari pengguna lain yang ada digunakan untuk memprediksi item yang mungkin disukai/diminati oleh seorang pengguna {(Ricci et al., 2011)}.
+\emph{Collaborative Filtering} adalah suatu konsep dimana opini dari pengguna lain yang ada digunakan untuk memprediksi item yang mungkin disukai/diminati oleh seorang pengguna \citep{handbook}.
 \emph{Collaborative filtering} bekerja dengan membuat suatu \emph{database} yang berisi item \emph{preferences} dari pengguna. Sebagai contoh, pengguna A dicocokkan terhadap data yang ada di \emph{database} untuk menemukan
 \emph{neighbor}, yaitu pengguna lain yang memiliki kemiripan \emph{preference} dengan pengguna A. Dari kecocokan yang didapatkan, pengguna A akan diberikan rekomendasi item yang sebelumnya pernah dipilih oleh neighbor dari
 pengguna A. \emph{Collaborative filtering} mampu memberikan rekomendasi yang lebih dari sekedar kemiripan item, melainkan dapat memberikan rekomendasi dengan mempelajari selera pengguna dan mencari pengguna yang memiliki selera yang kurang lebih sama.{(Aditya, Wayan, \& Budi, 2015)}.
 
 Pada implementasi \emph{Collaborative filtering} dalam sistem rekomendasi mata kuliah pilihan, data yang dibandingkan akan disimpan dalam sebuah matriks dua dimensi dimana dimensi dari y atau baris akan menyatakan mahasiswa dan dimensi x atau kolom akan menyatakan mata kuliah
-  {(Glenn, Rolly, \& Silvia, 2019)}.
+\citep{cosineSimilarity}.
 
 
 \subsection{Decision Tree}
 Decision tree merupakan algoritma \emph{supervised learning} yang dapat melakukan tugas klasifikasi maupun regresi. Algoritma ini merupakan sebuah metode kecerdasan buatan yang berbentuk pohon dimana pada setiap cabang memiliki
 pilihan serta alternatif dengan daun yang menyatakan keputusan yang dipilih. \emph{Decision tree} banyak digunakan karena dapat menggabungkan sebuah pola atau informasi kedalam sebuah bentu pohon keputusan {(Dwita, Agus \& Rizki 2022)}.
 \emph{Decision Tree} digunakan untuk mempelajari klasifikasi dan prediksi pola dari data dan menggambarkan relasi dari variabel attribut x dan variabel target y dalam bentuk pohon {(Ye, 2014)}. Pada umumnya, decision tree classifiers
-melakukan analisa dan konversi data menjadi decision tree dan sekumpulan aturan {(Aditya, Wayan, \& Budi, 2015)}.
+melakukan analisa dan konversi data menjadi decision tree dan sekumpulan aturan \citep{contentBasedXCollaborative}.
 
