@@ -22,8 +22,13 @@ untuk melakukan pelatihan pada model. Pada sistem rekomendasi pra-pemrosesan dat
 yang tidak diperlukan untuk proses pelatihan, menghapus \emph{missing value} jika ada, melakukan normalisasi pada data (biasanya mentransformasikan data kedalam range yang sama),
 melakukan pembagian data pelatihan dan data percobaan.
 
+\subsection{Model Development}
+Pembuatan model menggunakan dua pendekatan yaitu \emph{content-based filtering} dan \emph{collaborative filtering} dengan menggunakan algoritma \emph{Decision Tree}. Teknik
+\emph{content-based filtering} akan merekomendasikan mata kuliah yang benar benar mirip dengan mata kuliah yang pernah dipilih oleh mahasiswa sebelumnya. Sedangkan, \emph{collaborative filtering}
+memerlukan parameter pembanding yang akan digunakan untuk dipelajari oleh model nantinya. Pada kasus ini parameter pembanding yang akan digunakan yaitu nilai mata kuliah mahasiswa.
+
 \subsection{Training Model}
-Melakukan pelatihan pada dataset menggunakan model \emph{Decision Tree}, untuk dapat memberikan rekomendasi yang baik kepada mahasiswa.
+Melakukan pelatihan pada dataset menggunakan yang telah dibuat sebelumnya untuk menemukan pola pada data dan dapat memberikan rekomendasi yang baik kepada mahasiswa.
 
 \subsection{Evaluation}
 Evalusai dilakukan dengan melakukan rekomendasi pada data percobaan. Jika dirasa rekomendasi belum cukup baik. Maka perlu melakukan
