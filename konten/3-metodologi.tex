@@ -5,7 +5,7 @@ merupakan metodologi penelitian yang disusun sesuai dengan langkah-langkah yang 
 
 \begin{figure} [ht] \centering
   \counterwithin{figure}{section}
-  \includegraphics[width=160mm]{gambar/metodologi.png}
+  \includegraphics[width=160mm]{gambar/diagram-blok.png}
   \caption{Metodologi Penelitian}
 \end{figure}
 
@@ -30,8 +30,19 @@ memerlukan parameter pembanding yang akan digunakan untuk dipelajari oleh model 
 \subsection{Training Model}
 Melakukan pelatihan pada dataset menggunakan yang telah dibuat sebelumnya untuk menemukan pola pada data dan dapat memberikan rekomendasi yang baik kepada mahasiswa.
 
-\subsection{Evaluation}
-Evalusai dilakukan dengan melakukan rekomendasi pada data percobaan. Jika dirasa rekomendasi belum cukup baik. Maka perlu melakukan
+\subsection{Model Evaluation}
+Model Evalusai dilakukan dengan melakukan rekomendasi pada data percobaan. Jika dirasa rekomendasi belum cukup baik. Maka perlu melakukan
 \emph{tuning parameter} pada model seperti jumlah pohon yang digunakan pada model \emph{Decision Tree}, jumlah iterasi pelatihan dan
 beberapa parameter lain sampai model dapat memberikan rekomendasi dengan cukup baik.
+
+\subsection{Model Deployment}
+Pada tahap ini model dari sistem rekomendasi yang telah dibuat sebelumnya ada dideploy atau dirilis agar dapat digunakan untuk memberikan rekomendasi melalui sebuah \emph{software}.
+\emph{Software} yang digunakan untuk menampilkan rekomendasi dari mata kuliah yang diberikan oleh model tersebut berupa website sederhana yang bisa menampilkan daftar mata kuliah
+yang direkomendasikan sesuai dengan ID/NRP dari mahasiswa.
+
+\begin{figure} [ht] \centering
+  \counterwithin{figure}{section}
+  \includegraphics[width=160mm]{gambar/mockup.png}
+  \caption{Mock Up Tampilan Website Sederhana}
+\end{figure}
 
