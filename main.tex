@@ -35,6 +35,12 @@
 
 % Pengaturan format judul bab
 \usepackage{titlesec}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+
 \titleformat*{\section}{\large\bfseries}
 \titleformat*{\subsection}{\large\bfseries}
 \titlespacing{\section}{0ex}{3ex}{1.5ex}
@@ -47,8 +53,7 @@
 \usepackage{etoolbox}
 
 \makeatletter
-\pretocmd{\chapter}{\addtocontents{toc}{\protect\addvspace{15\p@}}}{}{}
-\pretocmd{\section}{\addtocontents{toc}{\protect\addvspace{10\p@}}}{}{}
+\pretocmd{\chapter}{\addtocontents{toc}{\protect\addvspace{10\p@}}}{}{}
 \makeatother
 
 \titlecontents{chapter}
@@ -56,25 +61,32 @@
   {\bfseries}
   {\chaptername\ \thecontentslabel:\quad}
   {}
-  {\hfill\contentspage}
+  {\mdseries\titlerule*[0.75em]{.}\bfseries\contentspage}
 
 % Isi keseluruhan dokumen
 \begin{document}
 
 % Lembar pengesahan
-\input{pengesahan/pengesahan.tex}
+\input{lainnya/pengesahan.tex}
+\newpage
+
+% Abstrak
+\input{lainnya/abstrak.tex}
 \newpage
 
 % Daftar isi
 \tableofcontents
+\addcontentsline{toc}{chapter}{Daftar Isi}
 \newpage
 
 % Daftar gambar
 \listoffigures
+\addcontentsline{toc}{chapter}{Daftar Gambar}
 \newpage
 
-% Daftar gambar
+% Daftar tabel
 \listoftables
+\addcontentsline{toc}{chapter}{Daftar Table}
 \newpage
 
 % Konten pendahuluan
@@ -93,7 +105,8 @@
 % \input{konten/4-lainnya.tex}
 
 % Daftar pustaka
-\chapter*{DAFTAR PUSTAKA}
+\chapter*{Daftar Pustaka}
+\addcontentsline{toc}{chapter}{Daftar Pustaka}
 \vspace{-2ex}
 \bibliographystyle{unsrt}
 \bibliography{pustaka/pustaka.bib}

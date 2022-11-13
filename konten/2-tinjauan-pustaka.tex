@@ -11,20 +11,20 @@ pada data \emph{testing} sebesar 69.24\% untuk algoritma \emph{Cosine Similarity
 \begin{table} [ht] \centering
   \counterwithin{table}{chapter}
   \caption{Hasil akurasi algoritma \emph{Cosine Similarity} dan \emph{Adjusted Cosine Similarity} \citep{cosineSimilarity}}
-  \vspace*{3mm}
-  \includegraphics{gambar/akurasi-algoritma-cosine-similarity.png}
+  \vspace*{2mm}
+  \includegraphics[width=160mm]{gambar/akurasi-algoritma-cosine-similarity.png}
 \end{table}
 
 Dan mendapatkan akurasi pada data \emph{testing} menggunakan model \emph{K-Nearest Neighbors} dengan jumlah K = 16 sebesar 89.31\%
 dan mendapatkan Mean Absolute Error sekitar 10.75.
+\newpage
 
 \begin{figure} [ht] \centering
   \counterwithin{figure}{chapter}
-  \includegraphics{gambar/mae-knn.png}
-  \vspace*{3mm}
+  \includegraphics[width=160mm]{gambar/mae-knn.png}
+  \vspace*{2mm}
   \caption{Visualisasi Mean Absolute Error model \emph{K-Nearest Neighbors} \citep{cosineSimilarity}}
 \end{figure}
-
 
 Pada tahun 2022 Edward Fernando, Panca Mudjiraharjo, dan Muhammad Aswin melakukan penelitian untuk membuat sistem rekomendasi
 dengan pendekatan \emph{Collacorative filtering} dan algoritma \emph{K-Means Clustering}. Dalam penelitian ini, sistem rekomendasi
@@ -36,16 +36,18 @@ secara berurutan adalah metode \emph{cosine similiarity}, \emph{euclidean distan
 \begin{table} [ht] \centering
   \counterwithin{table}{chapter}
   \caption{Nilai Kenaikan Akurasi Pendekatan \emph{Collaborative Filtering} dengan \emph{K-Means Clustering} \citep{clustering}}
-  \vspace*{3mm}
-  \begin{tabular}{|c|cc|c|}
-    \hline
-    \multirow{2}{*}{Metode} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Moving Average Akurasi \\ MK\end{tabular}} & \multirow{2}{*}{Kenaikan Akurasi}                                  \\ \cline{2-3}
-                            & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Sebelum \\ K-means\end{tabular}}           & \begin{tabular}[c]{@{}c@{}}Sesusah\\ K-Means\end{tabular} &        \\ \hline
-    Jaccard                 & \multicolumn{1}{c|}{51.18\%}                                                              & 53.66\%                                                   & 4.83\% \\ \hline
-    Euclidean Distance      & \multicolumn{1}{c|}{56.44\%}                                                              & 62.04\%                                                   & 9.92\% \\ \hline
-    Cosine Similiarity      & \multicolumn{1}{c|}{59.25\%}                                                              & 64.76\%                                                   & 9.30\% \\ \hline
-    Pearson Correlation     & \multicolumn{1}{c|}{40.83\%}                                                              & 43.71\%                                                   & 7.05\% \\ \hline
-  \end{tabular}
+  \vspace*{2mm}
+  \resizebox{\columnwidth}{!}{
+    \begin{tabular}{|c|cc|c|}
+      \hline
+      \multirow{2}{*}{Metode} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Moving Average Akurasi \\ MK\end{tabular}} & \multirow{2}{*}{Kenaikan Akurasi}                                  \\ \cline{2-3}
+                              & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Sebelum \\ K-means\end{tabular}}           & \begin{tabular}[c]{@{}c@{}}Sesusah\\ K-Means\end{tabular} &        \\ \hline
+      Jaccard                 & \multicolumn{1}{c|}{51.18\%}                                                              & 53.66\%                                                   & 4.83\% \\ \hline
+      Euclidean Distance      & \multicolumn{1}{c|}{56.44\%}                                                              & 62.04\%                                                   & 9.92\% \\ \hline
+      Cosine Similiarity      & \multicolumn{1}{c|}{59.25\%}                                                              & 64.76\%                                                   & 9.30\% \\ \hline
+      Pearson Correlation     & \multicolumn{1}{c|}{40.83\%}                                                              & 43.71\%                                                   & 7.05\% \\ \hline
+    \end{tabular}
+  }
 \end{table}
 
 Proses optimalisasi hasil rekomendasi mata kuliah pada penelitian ini dilakukan dengan melakukan seleksi rekomendasi berdasarkan tabel keputusan
@@ -60,16 +62,18 @@ pada penelitian ini, pendekatan \emph{collaborative filtering} yang paling optim
 \begin{table} [ht] \centering
   \counterwithin{table}{chapter}
   \caption{Nilai Mean Absolute Error Akurasi Mata Kuliah \citep{clustering}}
-  \vspace*{3mm}
-  \begin{tabular}{|c|cc|c|}
-    \hline
-    \multirow{2}{*}{Metode} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Moving Average Akurasi \\ MK\end{tabular}} & \multirow{2}{*}{Kenaikan Akurasi}                                  \\ \cline{2-3}
-                            & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Sebelum \\ K-means\end{tabular}}           & \begin{tabular}[c]{@{}c@{}}Sesusah\\ K-Means\end{tabular} &        \\ \hline
-    Jaccard                 & \multicolumn{1}{c|}{51.18\%}                                                              & 53.66\%                                                   & 4.83\% \\ \hline
-    Euclidean Distance      & \multicolumn{1}{c|}{56.44\%}                                                              & 62.04\%                                                   & 9.92\% \\ \hline
-    Cosine Similiarity      & \multicolumn{1}{c|}{59.25\%}                                                              & 64.76\%                                                   & 9.30\% \\ \hline
-    Pearson Correlation     & \multicolumn{1}{c|}{40.83\%}                                                              & 43.71\%                                                   & 7.05\% \\ \hline
-  \end{tabular}
+  \vspace*{2mm}
+  \resizebox{\columnwidth}{!}{
+    \begin{tabular}{|c|cc|c|}
+      \hline
+      \multirow{2}{*}{Metode} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Moving Average Akurasi \\ MK\end{tabular}} & \multirow{2}{*}{Kenaikan Akurasi}                                  \\ \cline{2-3}
+                              & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Sebelum \\ K-means\end{tabular}}           & \begin{tabular}[c]{@{}c@{}}Sesusah\\ K-Means\end{tabular} &        \\ \hline
+      Jaccard                 & \multicolumn{1}{c|}{51.18\%}                                                              & 53.66\%                                                   & 4.83\% \\ \hline
+      Euclidean Distance      & \multicolumn{1}{c|}{56.44\%}                                                              & 62.04\%                                                   & 9.92\% \\ \hline
+      Cosine Similiarity      & \multicolumn{1}{c|}{59.25\%}                                                              & 64.76\%                                                   & 9.30\% \\ \hline
+      Pearson Correlation     & \multicolumn{1}{c|}{40.83\%}                                                              & 43.71\%                                                   & 7.05\% \\ \hline
+    \end{tabular}
+  }
 \end{table}
 
 \section{\emph{Deep Learning}}
@@ -92,7 +96,7 @@ secara non-linier, terdistribusi, paralel dan lokal \citep{ANN}.
 \begin{figure} [ht] \centering
   \counterwithin{figure}{chapter}
   \includegraphics{gambar/ann.png}
-  \vspace*{3mm}
+  \vspace*{2mm}
   \caption{Prinsip Kerja \emph{Artificial Neural Network} \citep{ANN}}
 \end{figure}
 
