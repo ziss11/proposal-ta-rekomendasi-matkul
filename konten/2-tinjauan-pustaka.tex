@@ -1,6 +1,6 @@
-\section{TINJAUAN PUSTAKA}
+\chapter{Tinjauan Pustaka}
 
-\subsection{Penelitian Terdahulu}
+\section{Penelitian Terdahulu}
 Penelitian mengenai rekomendasi mata kuliah telah di lakukan. Pada tahun 2019 Glenn Ferio, Rolly Intan, dan Silvia Rostianingsih melakukan
 penelitian mengenai sistem rekomendasi mata kuliah pilihan pada \emph{paper} yang berjudul
 \emph{Sistem Rekomendasi Mata Kuliah Pilihan Menggunakan Metode pengguna Based Collaborative Filtering Berbasis Algoritma Adjusted Cosine Similarity}.
@@ -9,7 +9,7 @@ Input yang digunakan dalam penelitian ini adalah nilai-nilai mata kuliah yang di
 pada data \emph{testing} sebesar 69.24\% untuk algoritma \emph{Cosine Similarity} dan 83.55\% untuk algoritma \emph{Adjusted Cosine Similarity}.
 
 \begin{table} [ht] \centering
-  \counterwithin{table}{section}
+  \counterwithin{table}{chapter}
   \caption{Hasil akurasi algoritma \emph{Cosine Similarity} dan \emph{Adjusted Cosine Similarity} \citep{cosineSimilarity}}
   \vspace*{3mm}
   \includegraphics{gambar/akurasi-algoritma-cosine-similarity.png}
@@ -19,7 +19,7 @@ Dan mendapatkan akurasi pada data \emph{testing} menggunakan model \emph{K-Neare
 dan mendapatkan Mean Absolute Error sekitar 10.75.
 
 \begin{figure} [ht] \centering
-  \counterwithin{figure}{section}
+  \counterwithin{figure}{chapter}
   \includegraphics{gambar/mae-knn.png}
   \vspace*{3mm}
   \caption{Visualisasi Mean Absolute Error model \emph{K-Nearest Neighbors} \citep{cosineSimilarity}}
@@ -34,7 +34,7 @@ yang dapat diambil pada semester selanjutnya. Dari implementasi awal, didapatkan
 secara berurutan adalah metode \emph{cosine similiarity}, \emph{euclidean distance}, \emph{jaccard distance}, lalu \emph{pearson correlation}.
 
 \begin{table} [ht] \centering
-  \counterwithin{table}{section}
+  \counterwithin{table}{chapter}
   \caption{Nilai Kenaikan Akurasi Pendekatan \emph{Collaborative Filtering} dengan \emph{K-Means Clustering} \citep{clustering}}
   \vspace*{3mm}
   \begin{tabular}{|c|cc|c|}
@@ -58,7 +58,7 @@ dan \emph{jaccard} sebesar 4.83\%. Secara keseluruhan, sistem rekomendasi mata k
 pada penelitian ini, pendekatan \emph{collaborative filtering} yang paling optimal untuk perekomendasian mata kuliah jatuh pada metode \emph{cosine similiarity}.
 
 \begin{table} [ht] \centering
-  \counterwithin{table}{section}
+  \counterwithin{table}{chapter}
   \caption{Nilai Mean Absolute Error Akurasi Mata Kuliah \citep{clustering}}
   \vspace*{3mm}
   \begin{tabular}{|c|cc|c|}
@@ -72,12 +72,32 @@ pada penelitian ini, pendekatan \emph{collaborative filtering} yang paling optim
   \end{tabular}
 \end{table}
 
-\subsection{Machine Learning}
-\emph{Machine Learning} sejenis kecerdasan buatan yang memungkinkan perangkat lunak untuk menjadi lebih akurat dalam memprediksi keluaran
-tanpa harus memprogram secara eksplisit untuk melakukannya. Algoritma \emph{machine learning} menggunakan data riwayat sebagai input untuk
-memprediksi keluaran baru atau menemukan pola pada data.
+\section{\emph{Deep Learning}}
+\emph{Deep learning} merupakan metode \emph{learning}
+yang memanfaatkan \emph{artificial neural network} yang berlapis-lapis(\emph{multi layer}). \emph{Artifical Neural Network} ini dibuat mirip otak manusia, dimana \emph{neuron-neuron} terkoneksi
+satu sama lain sehingga membentuk sebuah jaringan \emph{neuron} yang sangat rumit. \emph{Deep Learning} atau \emph{deep structured learning} atau \emph{hirarchial learning} atau \emph{deep neural} merupakan
+metode \emph{learning} yang memanfaatkan \emph{multiple non-linier transformation}, \emph{deep learning} dapat dipandang sebagai gabungan \emph{machine learning} dengan \emph{AI (artificial neural network)} \citep{deepLearning}.
 
-\subsection{Sistem Rekomendasi}
+\section{\emph{Artificial Neural Network}}
+\emph{Artificial Neural Network} adalah model matematis yang mencoba mensimulasikan struktur dan fungsi jaringan saraf biologis. Blok bangunan dasar dari setiap
+jaringan saraf tiruan adalah neuron buatan, yaitu model matematika sederhana (fungsi). Model seperti itu memiliki tiga set aturan sederhana: perkalian, penjumlahan, dan aktivasi.
+Pada pintu masuk neuron buatan input diberi bobot yang berarti bahwa setiap nilai input dikalikan dengan berat individu. Di bagian tengah neuron buatan adalah jumlah
+fungsi yang menjumlahkan semua input dan bias berbobot. Di pintu keluar neuron buatan jumlah dari masukan berbobot sebelumnya dan bias melewati fungsi aktivasi yang juga disebut
+fungsi pemindahan \citep{ANN}.
+
+Saat menggabungkan dua atau lebih neuron buatan, kita mendapatkan jaringan saraf tiruan. Jika neuron buatan tunggal hampir tidak memiliki kegunaan dalam memecahkan masalah kehidupan nyata, buatan
+jaringan saraf memilikinya. Bahkan jaringan saraf tiruan mampu memecahkan kompleks masalah kehidupan nyata dengan memproses informasi dalam blok bangunan dasar mereka (\emph{artificial neuron})
+secara non-linier, terdistribusi, paralel dan lokal \citep{ANN}.
+
+\begin{figure} [ht] \centering
+  \counterwithin{figure}{chapter}
+  \includegraphics{gambar/ann.png}
+  \vspace*{3mm}
+  \caption{Prinsip Kerja \emph{Artificial Neural Network} \citep{ANN}}
+\end{figure}
+
+
+\section{Sistem Rekomendasi}
 Sistem rekomendasi merupakan suatu sistem yang dapat memberikan informasi dan rekomendasi yang membantu pengguna dalam membuat keputusan berdasarkan data yang telah ada sebelumnya
 \citep{clustering}. Sistem rekomendasi akan memberikan rekomendasi yang berbeda kepada setiap pengguna, bukan sekedar memberikan daftar item paling banyak diminati, melainkan memberikan
 saran mengenai item-item yang mungkin sesuai untuk pengguna. Artinya, setiap pengguna akan mendapatkan rekomendasi yang berbeda, sesuai dengan profil dan minat
@@ -90,7 +110,7 @@ rekomendasi peringkat teratas yang cocok dengan pengguna.
 Meskipun demikian, penentuan rekomendasi personal mensyaratkan bahwa sistem harus memiliki pengetahuan tentang pengguna. Setiap system rekomendasi harus membuat dan
 memaintain suatu model pengguna atau profil pengguna yang, misalnya, memuat informasi mengenai minat atau preferences dari pengguna \citep{contentBasedXCollaborative}.
 
-\subsection{Content-based Filtering}
+\section{Content-based Filtering}
 \emph{Content-based Filtering} adalah jenis sistem pemberi rekomendasi yang mencoba menebak apa yang mungkin disukai pengguna berdasarkan aktivitas pengguna tersebut. \emph{Content-based Filtering}
 membuat rekomendasi dengan menggunakan kata kunci dan atribut yang ditetapkan ke objek dalam database (misalnya, item di pasar online) dan mencocokkannya dengan profil pengguna.
 Sistem rekomendasi dengan metode \emph{content-based filtering} melakukan proses learning untuk merekomendasikan item yang mirip dengan item sebelumnya
@@ -105,7 +125,7 @@ Misalnya, jika pengguna memiliki positif menilai film yang termasuk dalam genre 
 merekomendasikan film lain dari genre ini \citep{handbook}.
 
 
-\subsection{Collaborative Filtering}
+\section{Collaborative Filtering}
 \emph{Collaborative Filtering} adalah suatu konsep dimana opini dari pengguna lain yang ada digunakan untuk memprediksi item yang mungkin disukai/diminati oleh seorang pengguna \citep{handbook}.
 \emph{Collaborative filtering} bekerja dengan membuat suatu \emph{database} yang berisi item \emph{preferences} dari pengguna. Sebagai contoh, pengguna A dicocokkan terhadap data yang ada di \emph{database} untuk menemukan
 \emph{neighbor}, yaitu pengguna lain yang memiliki kemiripan \emph{preference} dengan pengguna A. Dari kecocokan yang didapatkan, pengguna A akan diberikan rekomendasi item yang sebelumnya pernah dipilih oleh neighbor dari
@@ -113,11 +133,3 @@ pengguna A. \emph{Collaborative filtering} mampu memberikan rekomendasi yang leb
 
 Pada implementasi \emph{Collaborative filtering} dalam sistem rekomendasi mata kuliah pilihan, data yang dibandingkan akan disimpan dalam sebuah matriks dua dimensi dimana dimensi dari y atau baris akan menyatakan mahasiswa dan dimensi x atau kolom akan menyatakan mata kuliah
 \citep{cosineSimilarity}.
-
-
-\subsection{Decision Tree}
-Decision tree merupakan algoritma \emph{supervised learning} yang dapat melakukan tugas klasifikasi maupun regresi. Algoritma ini merupakan sebuah metode kecerdasan buatan yang berbentuk pohon dimana pada setiap cabang memiliki
-pilihan serta alternatif dengan daun yang menyatakan keputusan yang dipilih. \emph{Decision tree} banyak digunakan karena dapat menggabungkan sebuah pola atau informasi kedalam sebuah bentu pohon keputusan \citep{decisionTreeObat}.
-\emph{Decision Tree} digunakan untuk mempelajari klasifikasi dan prediksi pola dari data dan menggambarkan relasi dari variabel attribut x dan variabel target y dalam bentuk pohon \citep{dataMiningBook}. Pada umumnya, decision tree classifiers
-melakukan analisa dan konversi data menjadi decision tree dan sekumpulan aturan \citep{contentBasedXCollaborative}.
-
