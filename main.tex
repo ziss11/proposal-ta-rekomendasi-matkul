@@ -1,8 +1,8 @@
 % Pengaturan ukuran teks dan jenis dokumen
-\documentclass[12pt, a4paper]{report}
+\documentclass[12pt]{report}
 
 % Pengaturan ukuran halaman dan margin
-\usepackage[top=30mm,left=30mm,right=20mm,bottom=25mm]{geometry}
+\usepackage[a4paper, top=30mm,left=30mm,right=20mm,bottom=25mm]{geometry}
 
 % Pengaturan ukuran spasi
 \usepackage[singlespacing]{setspace}
@@ -21,7 +21,7 @@
 \usepackage[utf8]{inputenc}
 
 % Package lainnya
-% \usepackage{times}
+% \usepackage{mathptmx}
 \usepackage{etoolbox} %s Mengubah fungsi default
 \usepackage{enumitem} % Pembuatan list
 \usepackage{lipsum} % Pembuatan template kalimat
@@ -32,66 +32,93 @@
 \usepackage{changepage} % Pembuatan teks kolom
 \usepackage{multicol} % Pembuatan kolom ganda
 \usepackage{multirow} % Pembuatan baris ganda
+\usepackage{eso-pic}
+\usepackage{anyfontsize}
+
+% Pengaturan penomoran halaman
+\usepackage{fancyhdr}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\fancyfoot[C]{\thepage}
+\patchcmd{\chapter}{plain}{fancy}{}{}
+\patchcmd{\chapter}{empty}{plain}{}{}
 
 % Pengaturan format judul bab
 \usepackage{titlesec}
 \renewcommand{\thechapter}{\Roman{chapter}}
-\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
-\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
-\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}  
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}  
 \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 
+\titleformat{\chapter}[display]{\bfseries\centering\Large}{BAB \thechapter}{8pt}{\MakeUppercase}
 \titleformat*{\section}{\large\bfseries}
 \titleformat*{\subsection}{\large\bfseries}
 \titlespacing{\section}{0ex}{3ex}{1.5ex}
 \titlespacing{\subsection}{0ex}{3ex}{1.5ex}
-\titleformat{\chapter}[display]{\bfseries\centering\Large}{Bab \thechapter}{8pt}{\MakeUppercase\large}
 \titlespacing{\chapter}{0pt}{0pt}{20pt}
 
 % Pengaturan daftar konten
 \usepackage{titletoc}
 \usepackage{etoolbox}
+\usepackage[titles]{tocloft}
 
 \makeatletter
 \pretocmd{\chapter}{\addtocontents{toc}{\protect\addvspace{10\p@}}}{}{}
+\pretocmd{\section}{\addtocontents{toc}{\protect\addvspace{5\p@}}}{}{}
+\pretocmd{\section}{\addtocontents{toc}{\protect\addvspace{5\p@}}}{}{}
 \makeatother
+
+\renewcommand\cftfigafterpnum{\vskip5pt\par}
+\renewcommand\cfttabafterpnum{\vskip5pt\par}
+\renewcommand\cftbeforechapskip{\vskip5pt\par}
 
 \titlecontents{chapter}
   [0pt]
   {\bfseries}
-  {\chaptername\ \thecontentslabel:\quad}
+  {\MakeUppercase{\chaptername\ \thecontentslabel:\quad}}
   {}
   {\mdseries\titlerule*[0.75em]{.}\bfseries\contentspage}
 
 % Isi keseluruhan dokumen
 \begin{document}
 
+% Sampul
+\newcommand\covercontents{sampul/konten.tex}
+\input{sampul/sampul.tex}
+
+% Atur ulang penomoran halaman
+\pagenumbering{roman}
+
 % Lembar pengesahan
 \input{pengesahan/pengesahan-ind.tex}
-\newpage
-\input{pengesahan/pengesahan-eng.tex}
 \newpage
 
 % Abstrak
 \input{abstrak/abstrak-ind.tex}
-\newpage
-\input{abstrak/abstrak-eng.tex}
+\addcontentsline{toc}{chapter}{ABSTRAK}
 \newpage
 
 % Daftar isi
+\renewcommand*\contentsname{DAFTAR ISI}
 \tableofcontents
-\addcontentsline{toc}{chapter}{Daftar Isi}
+\addcontentsline{toc}{chapter}{\contentsname}
 \newpage
 
 % Daftar gambar
+\renewcommand*\listfigurename{DAFTAR GAMBAR}
 \listoffigures
-\addcontentsline{toc}{chapter}{Daftar Gambar}
+\addcontentsline{toc}{chapter}{\listfigurename}
 \newpage
 
 % Daftar tabel
+\renewcommand*\listtablename{DAFTAR TABEL}
 \listoftables
-\addcontentsline{toc}{chapter}{Daftar Table}
+\addcontentsline{toc}{chapter}{\listtablename}
 \newpage
+
+% Nomor halaman isi dimulai dari sini
+\pagenumbering{arabic}
 
 % Konten pendahuluan
 \input{konten/1-pendahuluan.tex}
@@ -109,8 +136,9 @@
 % \input{konten/4-lainnya.tex}
 
 % Daftar pustaka
-\chapter*{Daftar Pustaka}
-\addcontentsline{toc}{chapter}{Daftar Pustaka}
+\renewcommand{\bibsection}{}
+\chapter*{DAFTAR PUSTAKA}
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
 \vspace{-2ex}
 \bibliographystyle{unsrt}
 \bibliography{pustaka/pustaka.bib}

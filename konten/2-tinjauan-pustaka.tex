@@ -1,4 +1,4 @@
-\chapter{Tinjauan Pustaka}
+\chapter{TINJAUAN PUSTAKA}
 
 \section{Penelitian Terdahulu}
 Penelitian mengenai rekomendasi mata kuliah telah di lakukan. Pada tahun 2019 Glenn Ferio, Rolly Intan, dan Silvia Rostianingsih melakukan
@@ -9,7 +9,6 @@ Input yang digunakan dalam penelitian ini adalah nilai-nilai mata kuliah yang di
 pada data \emph{testing} sebesar 69.24\% untuk algoritma \emph{Cosine Similarity} dan 83.55\% untuk algoritma \emph{Adjusted Cosine Similarity}.
 
 \begin{table} [ht] \centering
-  \counterwithin{table}{chapter}
   \caption{Hasil akurasi algoritma \emph{Cosine Similarity} dan \emph{Adjusted Cosine Similarity} \citep{cosineSimilarity}}
   \vspace*{2mm}
   \includegraphics[width=160mm]{gambar/akurasi-algoritma-cosine-similarity.png}
@@ -20,7 +19,6 @@ dan mendapatkan Mean Absolute Error sekitar 10.75.
 \newpage
 
 \begin{figure} [ht] \centering
-  \counterwithin{figure}{chapter}
   \includegraphics[width=160mm]{gambar/mae-knn.png}
   \vspace*{2mm}
   \caption{Visualisasi Mean Absolute Error model \emph{K-Nearest Neighbors} \citep{cosineSimilarity}}
@@ -34,7 +32,6 @@ yang dapat diambil pada semester selanjutnya. Dari implementasi awal, didapatkan
 secara berurutan adalah metode \emph{cosine similiarity}, \emph{euclidean distance}, \emph{jaccard distance}, lalu \emph{pearson correlation}.
 
 \begin{table} [ht] \centering
-  \counterwithin{table}{chapter}
   \caption{Nilai Kenaikan Akurasi Pendekatan \emph{Collaborative Filtering} dengan \emph{K-Means Clustering} \citep{clustering}}
   \vspace*{2mm}
   \resizebox{\columnwidth}{!}{
@@ -60,7 +57,6 @@ dan \emph{jaccard} sebesar 4.83\%. Secara keseluruhan, sistem rekomendasi mata k
 pada penelitian ini, pendekatan \emph{collaborative filtering} yang paling optimal untuk perekomendasian mata kuliah jatuh pada metode \emph{cosine similiarity}.
 
 \begin{table} [ht] \centering
-  \counterwithin{table}{chapter}
   \caption{Nilai Mean Absolute Error Akurasi Mata Kuliah \citep{clustering}}
   \vspace*{2mm}
   \resizebox{\columnwidth}{!}{
@@ -94,7 +90,6 @@ jaringan saraf memilikinya. Bahkan jaringan saraf tiruan mampu memecahkan komple
 secara non-linier, terdistribusi, paralel dan lokal \citep{ANN}.
 
 \begin{figure} [ht] \centering
-  \counterwithin{figure}{chapter}
   \includegraphics{gambar/ann.png}
   \vspace*{2mm}
   \caption{Prinsip Kerja \emph{Artificial Neural Network} \citep{ANN}}
@@ -114,7 +109,7 @@ rekomendasi peringkat teratas yang cocok dengan pengguna.
 Meskipun demikian, penentuan rekomendasi personal mensyaratkan bahwa sistem harus memiliki pengetahuan tentang pengguna. Setiap system rekomendasi harus membuat dan
 memaintain suatu model pengguna atau profil pengguna yang, misalnya, memuat informasi mengenai minat atau preferences dari pengguna \citep{contentBasedXCollaborative}.
 
-\section{Content-based Filtering}
+\section{\emph{Content-based Filtering}}
 \emph{Content-based Filtering} adalah jenis sistem pemberi rekomendasi yang mencoba menebak apa yang mungkin disukai pengguna berdasarkan aktivitas pengguna tersebut. \emph{Content-based Filtering}
 membuat rekomendasi dengan menggunakan kata kunci dan atribut yang ditetapkan ke objek dalam database (misalnya, item di pasar online) dan mencocokkannya dengan profil pengguna.
 Sistem rekomendasi dengan metode \emph{content-based filtering} melakukan proses learning untuk merekomendasikan item yang mirip dengan item sebelumnya
@@ -129,7 +124,7 @@ Misalnya, jika pengguna memiliki positif menilai film yang termasuk dalam genre 
 merekomendasikan film lain dari genre ini \citep{handbook}.
 
 
-\section{Collaborative Filtering}
+\section{\emph{Collaborative Filtering}}
 \emph{Collaborative Filtering} adalah suatu konsep dimana opini dari pengguna lain yang ada digunakan untuk memprediksi item yang mungkin disukai/diminati oleh seorang pengguna \citep{handbook}.
 \emph{Collaborative filtering} bekerja dengan membuat suatu \emph{database} yang berisi item \emph{preferences} dari pengguna. Sebagai contoh, pengguna A dicocokkan terhadap data yang ada di \emph{database} untuk menemukan
 \emph{neighbor}, yaitu pengguna lain yang memiliki kemiripan \emph{preference} dengan pengguna A. Dari kecocokan yang didapatkan, pengguna A akan diberikan rekomendasi item yang sebelumnya pernah dipilih oleh neighbor dari
