@@ -1,8 +1,8 @@
 % Pengaturan ukuran teks dan jenis dokumen
-\documentclass[12pt]{report}
+\documentclass[a4paper, 12pt]{report}
 
 % Pengaturan ukuran halaman dan margin
-\usepackage[a4paper, top=30mm,left=30mm,right=20mm,bottom=25mm]{geometry}
+\usepackage[top=30mm,left=30mm,right=20mm,bottom=25mm]{geometry}
 
 % Pengaturan ukuran spasi
 \usepackage[singlespacing]{setspace}
@@ -20,8 +20,12 @@
 % Pengaturan jenis karakter
 \usepackage[utf8]{inputenc}
 
+% Mengubah jenis font ke Times New Roman
+% hanya jika dijalankan menggunakan recipt xelatex
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
 % Package lainnya
-% \usepackage{mathptmx}
 \usepackage{etoolbox} %s Mengubah fungsi default
 \usepackage{enumitem} % Pembuatan list
 \usepackage{lipsum} % Pembuatan template kalimat
@@ -82,7 +86,6 @@
 
 % Isi keseluruhan dokumen
 \begin{document}
-
 % Sampul
 \newcommand\covercontents{sampul/konten.tex}
 \input{sampul/sampul.tex}
