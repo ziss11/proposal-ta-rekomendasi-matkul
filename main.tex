@@ -22,6 +22,7 @@
 
 % Package lainnya
 % \usepackage{newtxtext,newtxmath}
+\usepackage{fontspec}
 \usepackage{etoolbox} %s Mengubah fungsi default
 \usepackage{enumitem} % Pembuatan list
 \usepackage{lipsum} % Pembuatan template kalimat
@@ -34,6 +35,8 @@
 \usepackage{multirow} % Pembuatan baris ganda
 \usepackage{eso-pic}
 \usepackage{anyfontsize}
+
+\setmainfont{Times New Roman}
 
 % Pengaturan penomoran halaman
 \usepackage{fancyhdr}
@@ -81,7 +84,7 @@
   {\mdseries\titlerule*[0.75em]{.}\bfseries\contentspage}
 
 % Isi keseluruhan dokumen
-\usepackage{times}\begin{document}
+\begin{document}
 % Sampul
 \newcommand\covercontents{sampul/konten.tex}
 \input{sampul/sampul.tex}
