@@ -20,12 +20,8 @@
 % Pengaturan jenis karakter
 \usepackage[utf8]{inputenc}
 
-% Mengubah jenis font ke Times New Roman
-% hanya jika dijalankan menggunakan recipt xelatex
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
-
 % Package lainnya
+% \usepackage{newtxtext,newtxmath}
 \usepackage{etoolbox} %s Mengubah fungsi default
 \usepackage{enumitem} % Pembuatan list
 \usepackage{lipsum} % Pembuatan template kalimat
@@ -85,7 +81,7 @@
   {\mdseries\titlerule*[0.75em]{.}\bfseries\contentspage}
 
 % Isi keseluruhan dokumen
-\begin{document}
+\usepackage{times}\begin{document}
 % Sampul
 \newcommand\covercontents{sampul/konten.tex}
 \input{sampul/sampul.tex}
