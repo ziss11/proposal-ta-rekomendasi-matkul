@@ -22,7 +22,7 @@ yang tidak diperlukan untuk proses pelatihan, menghapus \emph{missing value} jik
 melakukan pembagian data pelatihan dan data percobaan.
 
 \section{Model Development}
-Pembuatan model menggunakan dua pendekatan yaitu \emph{content-based filtering} dan \emph{collaborative filtering} dengan menggunakan algoritma \emph{Decision Tree}. Teknik
+Pembuatan model menggunakan dua pendekatan yaitu \emph{content-based filtering} dan \emph{collaborative filtering} dengan menggunakan metode \emph{Deep Learning}. Teknik
 \emph{content-based filtering} akan merekomendasikan mata kuliah yang benar benar mirip dengan mata kuliah yang pernah dipilih oleh mahasiswa sebelumnya. Sedangkan, \emph{collaborative filtering}
 memerlukan parameter pembanding yang akan digunakan untuk dipelajari oleh model nantinya. Pada kasus ini parameter pembanding yang akan digunakan yaitu nilai mata kuliah mahasiswa.
 
@@ -30,9 +30,8 @@ memerlukan parameter pembanding yang akan digunakan untuk dipelajari oleh model 
 Melakukan pelatihan pada dataset menggunakan yang telah dibuat sebelumnya untuk menemukan pola pada data dan dapat memberikan rekomendasi yang baik kepada mahasiswa.
 
 \section{Model Evaluation}
-Model Evalusai dilakukan dengan melakukan rekomendasi pada data percobaan. Jika dirasa rekomendasi belum cukup baik. Maka perlu melakukan
-\emph{tuning parameter} pada model seperti jumlah pohon yang digunakan pada model \emph{Decision Tree}, jumlah iterasi pelatihan dan
-beberapa parameter lain sampai model dapat memberikan rekomendasi dengan cukup baik.
+Evaluasi Model dilakukan dengan melakukan rekomendasi pada data percobaan. Jika dirasa rekomendasi belum cukup baik. Maka perlu melakukan
+\emph{tuning parameter} pada model seperti unit layer, jumlah layer pada model \emph{Deep Learning}, jumlah iterasi pelatihan dan beberapa parameter lain hingga model dapat memberikan rekomendasi dengan cukup baik.
 
 \section{Model Deployment}
 Pada tahap ini model dari sistem rekomendasi yang telah dibuat sebelumnya ada dideploy atau dirilis agar dapat digunakan untuk memberikan rekomendasi melalui sebuah \emph{software}.
