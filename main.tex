@@ -31,9 +31,11 @@
 \usepackage{changepage} % Pembuatan teks kolom
 \usepackage{multicol} % Pembuatan kolom ganda
 \usepackage{multirow} % Pembuatan baris ganda
-\usepackage{txfonts} % Font times
 \usepackage{eso-pic}
-\usepackage{anyfontsize}
+\usepackage{fontspec}
+
+% Mengubah font (harus menggunakan recipt xelatex)
+\setmainfont{Times New Roman}
 
 % Pengaturan penomoran halaman
 \usepackage{fancyhdr}
@@ -82,8 +84,12 @@
 
 % Isi keseluruhan dokumen
 \begin{document}
-% Sampul
-\newcommand\covercontents{sampul/konten.tex}
+% Sampul Bahasa Indonesia
+\newcommand\covercontents{sampul/konten-id.tex}
+\input{sampul/sampul.tex}
+
+% Sampul Bahasa Inggris
+\renewcommand\covercontents{sampul/konten-en.tex}
 \input{sampul/sampul.tex}
 
 % Atur ulang penomoran halaman
