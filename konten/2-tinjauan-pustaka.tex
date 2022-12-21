@@ -72,47 +72,49 @@ pada penelitian ini, pendekatan \emph{collaborative filtering} yang paling optim
   }
 \end{table}
 
-\section{\emph{Deep Learning}}
-\emph{Deep learning} merupakan metode \emph{learning}
-yang memanfaatkan \emph{artificial neural network} yang berlapis-lapis(\emph{multi layer}). \emph{Artifical Neural Network} ini dibuat mirip otak manusia, dimana \emph{neuron-neuron} terkoneksi
-satu sama lain sehingga membentuk sebuah jaringan \emph{neuron} yang sangat rumit. \emph{Deep Learning} atau \emph{deep structured learning} atau \emph{hirarchial learning} atau \emph{deep neural} merupakan
-metode \emph{learning} yang memanfaatkan \emph{multiple non-linier transformation}, \emph{deep learning} dapat dipandang sebagai gabungan \emph{machine learning} dengan \emph{AI (artificial neural network)} \citep{deepLearning}.
+\section{Teori Dasar}
 
-\section{Sistem Rekomendasi}
-Sistem rekomendasi merupakan suatu sistem yang dapat memberikan informasi dan rekomendasi yang membantu pengguna dalam membuat keputusan berdasarkan data yang telah ada sebelumnya
-\citep{clustering}. Sistem rekomendasi akan memberikan rekomendasi yang berbeda kepada setiap pengguna, bukan sekedar memberikan daftar item paling banyak diminati, melainkan memberikan
-saran mengenai item-item yang mungkin sesuai untuk pengguna. Artinya, setiap pengguna akan mendapatkan rekomendasi yang berbeda, sesuai dengan profil dan minat
-pengguna tersebut \citep{contentBasedXCollaborative}.
+\begin{adjustwidth}{1em}{0pt}
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+  
+  \subsection{\emph{Deep Learning}}
+  \emph{Deep learning} merupakan metode \emph{learning}
+  yang memanfaatkan \emph{artificial neural network} yang berlapis-lapis(\emph{multi layer}). \emph{Artifical Neural Network} ini dibuat mirip otak manusia, dimana \emph{neuron-neuron} terkoneksi
+  satu sama lain sehingga membentuk sebuah jaringan \emph{neuron} yang sangat rumit. \emph{Deep Learning} atau \emph{deep structured learning} atau \emph{hirarchial learning} atau \emph{deep neural} merupakan
+  metode \emph{learning} yang memanfaatkan \emph{multiple non-linier transformation}, \emph{deep learning} dapat dipandang sebagai gabungan \emph{machine learning} dengan \emph{AI (artificial neural network)} \citep{deepLearning}.
 
-Sistem ini tidak merekomendasikan item secara spesifik yang pengguna inginkan. Sistem akan merekomendasikan sejumlah item yang mungkin cocok, jadi jangan heran jika
-item yang direkomendasikan oleh sistem terkadang tidak sesuai dengan preferensi pengguna. Pada sistem rekomendasi, keluarannya adalah rekomendasi “top-N”. Sistem akan memberikan sejumlah
-rekomendasi peringkat teratas yang cocok dengan pengguna.
+  \subsection{Sistem Rekomendasi}
+  Sistem rekomendasi merupakan suatu sistem yang dapat memberikan informasi dan rekomendasi yang membantu pengguna dalam membuat keputusan berdasarkan data yang telah ada sebelumnya
+  \citep{clustering}. Sistem rekomendasi akan memberikan rekomendasi yang berbeda kepada setiap pengguna, bukan sekedar memberikan daftar item paling banyak diminati, melainkan memberikan
+  saran mengenai item-item yang mungkin sesuai untuk pengguna. Artinya, setiap pengguna akan mendapatkan rekomendasi yang berbeda, sesuai dengan profil dan minat
+  pengguna tersebut \citep{contentBasedXCollaborative}.
 
-Meskipun demikian, penentuan rekomendasi personal mensyaratkan bahwa sistem harus memiliki pengetahuan tentang pengguna. Setiap system rekomendasi harus membuat dan
-memaintain suatu model pengguna atau profil pengguna yang, misalnya, memuat informasi mengenai minat atau preferences dari pengguna \citep{contentBasedXCollaborative}.
+  Sistem ini tidak merekomendasikan item secara spesifik yang pengguna inginkan. Sistem akan merekomendasikan sejumlah item yang mungkin cocok, jadi jangan heran jika
+  item yang direkomendasikan oleh sistem terkadang tidak sesuai dengan preferensi pengguna. Pada sistem rekomendasi, keluarannya adalah rekomendasi “top-N”. Sistem akan memberikan sejumlah
+  rekomendasi peringkat teratas yang cocok dengan pengguna.
 
-\section{\emph{Content-based Filtering}}
-\emph{Content-based Filtering} adalah jenis sistem pemberi rekomendasi yang mencoba menebak apa yang mungkin disukai pengguna berdasarkan aktivitas pengguna tersebut. \emph{Content-based Filtering}
-membuat rekomendasi dengan menggunakan kata kunci dan atribut yang ditetapkan ke objek dalam database (misalnya, item di pasar online) dan mencocokkannya dengan profil pengguna.
-Sistem rekomendasi dengan metode \emph{content-based filtering} melakukan proses learning untuk merekomendasikan item yang mirip dengan item sebelumnya
-yang disukai atau dipilih oleh pengguna. Kemiripan item dihitung berdasarkan pada fitur-fitur yang ada pada item yang dibandingkan. Oleh karenanya, metode ini tidak bergantung
-pada situasi apakah item tersebut merupakan item baru {(yang belum pernah dipilih oleh pengguna manapun)} maupun bukan item baru. Konten yang menjadi obyek \emph{learning} pada
-metode ini umumnya adalah informasi fitur mengenai item yang tersedia, namun pada perkembangannya, profil pengguna juga dapat menjadi content yang dipelajari
-kemiripannya \citep{contentBasedXCollaborative}.
+  \subsection{\emph{Content-based Filtering}}
+  \emph{Content-based Filtering} adalah jenis sistem pemberi rekomendasi yang mencoba menebak apa yang mungkin disukai pengguna berdasarkan aktivitas pengguna tersebut. \emph{Content-based Filtering}
+  membuat rekomendasi dengan menggunakan kata kunci dan atribut yang ditetapkan ke objek dalam database (misalnya, item di pasar online) dan mencocokkannya dengan profil pengguna.
+  Sistem rekomendasi dengan metode \emph{content-based filtering} melakukan proses learning untuk merekomendasikan item yang mirip dengan item sebelumnya
+  yang disukai atau dipilih oleh pengguna. Kemiripan item dihitung berdasarkan pada fitur-fitur yang ada pada item yang dibandingkan. Oleh karenanya, metode ini tidak bergantung
+  pada situasi apakah item tersebut merupakan item baru {(yang belum pernah dipilih oleh pengguna manapun)} maupun bukan item baru. Konten yang menjadi obyek \emph{learning} pada
+  metode ini umumnya adalah informasi fitur mengenai item yang tersedia, namun pada perkembangannya, profil pengguna juga dapat menjadi content yang dipelajari
+  kemiripannya \citep{contentBasedXCollaborative}.
 
-Sistem akan memilih dan melakukan peringkat item berdasarkan kesamaan profil pengguna dan profil item.Kesamaan antara representasi dari pengguna dan representasi dari
-item akan didasarkan pada prinsip kedekatan yang menyatakan bahwa jarak dari dua deskripsi item secara langsung berkaitan dengan kesamaan mereka \citep{rekomendasiTanaman}.
-Misalnya, jika pengguna memiliki positif menilai film yang termasuk dalam genre komedi, maka sistem dapat belajar untuk
-merekomendasikan film lain dari genre ini \citep{handbook}.
+  Sistem akan memilih dan melakukan peringkat item berdasarkan kesamaan profil pengguna dan profil item.Kesamaan antara representasi dari pengguna dan representasi dari
+  item akan didasarkan pada prinsip kedekatan yang menyatakan bahwa jarak dari dua deskripsi item secara langsung berkaitan dengan kesamaan mereka \citep{rekomendasiTanaman}.
+  Misalnya, jika pengguna memiliki positif menilai film yang termasuk dalam genre komedi, maka sistem dapat belajar untuk
+  merekomendasikan film lain dari genre ini \citep{handbook}.
 
 
-\section{\emph{Collaborative Filtering}}
-\emph{Collaborative Filtering} adalah suatu konsep dimana opini dari pengguna lain yang ada digunakan untuk memprediksi item yang mungkin disukai/diminati oleh seorang pengguna \citep{handbook}.
-\emph{Collaborative filtering} bekerja dengan membuat suatu \emph{database} yang berisi item \emph{preferences} dari pengguna. Sebagai contoh, pengguna A dicocokkan terhadap data yang ada di \emph{database} untuk menemukan
-\emph{neighbor}, yaitu pengguna lain yang memiliki kemiripan \emph{preference} dengan pengguna A. Dari kecocokan yang didapatkan, pengguna A akan diberikan rekomendasi item yang sebelumnya pernah dipilih oleh neighbor dari
-pengguna A. \emph{Collaborative filtering} mampu memberikan rekomendasi yang lebih dari sekedar kemiripan item, melainkan dapat memberikan rekomendasi dengan mempelajari selera pengguna dan mencari pengguna yang memiliki selera yang kurang lebih sama \citep{contentBasedXCollaborative}.
+  \subsection{\emph{Collaborative Filtering}}
+  \emph{Collaborative Filtering} adalah suatu konsep dimana opini dari pengguna lain yang ada digunakan untuk memprediksi item yang mungkin disukai/diminati oleh seorang pengguna \citep{handbook}.
+  \emph{Collaborative filtering} bekerja dengan membuat suatu \emph{database} yang berisi item \emph{preferences} dari pengguna. Sebagai contoh, pengguna A dicocokkan terhadap data yang ada di \emph{database} untuk menemukan
+  \emph{neighbor}, yaitu pengguna lain yang memiliki kemiripan \emph{preference} dengan pengguna A. Dari kecocokan yang didapatkan, pengguna A akan diberikan rekomendasi item yang sebelumnya pernah dipilih oleh neighbor dari
+  pengguna A. \emph{Collaborative filtering} mampu memberikan rekomendasi yang lebih dari sekedar kemiripan item, melainkan dapat memberikan rekomendasi dengan mempelajari selera pengguna dan mencari pengguna yang memiliki selera yang kurang lebih sama \citep{contentBasedXCollaborative}.
 
-\section{\emph{Hybrid Recommender System}}
-\emph{Hybrid recommender system} merupakan sebuah konsep dimana sistem rekomendasi dibangun dengan menggabungkan dua atau lebih pendekatan. Terdapat banyak cara untuk mengombinasikan dua atau lebih pendekatan untuk dapat menghasilkan \emph{hybrid recommender system},
-salah satu yang paling mudah untuk diterapkan yaitu dengan menggabungkan hasil rekomendasi item yang diberikan oleh masing-masing pendekatan, dengan begitu kekurangan yang dimiliki oleh masing-masing pendekatan dapat bisa dilengkapi oleh pengekatan yang lainnya.
-
+  \subsection{\emph{Hybrid Recommender System}}
+  \emph{Hybrid recommender system} merupakan sebuah konsep dimana sistem rekomendasi dibangun dengan menggabungkan dua atau lebih pendekatan. Terdapat banyak cara untuk mengombinasikan dua atau lebih pendekatan untuk dapat menghasilkan \emph{hybrid recommender system},
+  salah satu yang paling mudah untuk diterapkan yaitu dengan menggabungkan hasil rekomendasi item yang diberikan oleh masing-masing pendekatan, dengan begitu kekurangan yang dimiliki oleh masing-masing pendekatan dapat bisa dilengkapi oleh pengekatan yang lainnya.
+\end{adjustwidth}
