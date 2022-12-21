@@ -31,11 +31,9 @@
 \usepackage{changepage} % Pembuatan teks kolom
 \usepackage{multicol} % Pembuatan kolom ganda
 \usepackage{multirow} % Pembuatan baris ganda
+\usepackage{txfonts} % Font times
 \usepackage{eso-pic}
-\usepackage{fontspec}
-
-% Mengubah font (harus menggunakan recipt xelatex)
-\setmainfont{Times New Roman}
+\usepackage{anyfontsize}
 
 % Pengaturan penomoran halaman
 \usepackage{fancyhdr}
@@ -143,7 +141,8 @@
 \newpage
 
 % Konten lainnya
-% \input{konten/4-lainnya.tex}
+\input{konten/4-lainnya.tex}
+\newpage
 
 % Daftar pustaka
 \renewcommand{\bibsection}{}
