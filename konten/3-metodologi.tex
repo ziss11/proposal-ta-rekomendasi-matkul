@@ -11,7 +11,7 @@ merupakan metodologi penelitian yang disusun sesuai dengan langkah-langkah yang 
 \end{figure}
 
 \section{Bahan dan peralatan yang digunakan}
-\begin{enumerate}[noitemsep]
+\begin{enumerate}
   \item Komputer/Laptop
   \item Python
   \item Jupyter Notebook
@@ -36,27 +36,33 @@ merupakan metodologi penelitian yang disusun sesuai dengan langkah-langkah yang 
   yang tidak diperlukan untuk proses pelatihan, menghapus \emph{missing value} jika ada, melakukan normalisasi pada data (biasanya mentransformasikan data kedalam range yang sama),
   melakukan pembagian data pelatihan dan data percobaan.
 
-  \subsection{Pembuatan Model}
-  Pembuatan model menggunakan dua pendekatan yaitu \emph{content-based filtering} dan \emph{collaborative filtering} dengan menggunakan metode \emph{Deep Learning}. Teknik
-  \emph{content-based filtering} akan merekomendasikan mata kuliah yang benar benar mirip dengan mata kuliah yang pernah dipilih oleh mahasiswa sebelumnya. Sedangkan, \emph{collaborative filtering}
-  memerlukan parameter pembanding yang akan digunakan untuk dipelajari oleh model nantinya. Pada kasus ini parameter pembanding yang akan digunakan yaitu nilai mata kuliah mahasiswa.
+  \subsection{\emph{Grades Prediction}}
+  Untuk dapat menemukan mata kuliah yang mungkin sesuai dengan minat mahasiswa, diperlukan model yang dapat memprediksi nilai mata kuliah yang kemungkinan akan diambil oleh mahasiswa. Ini
+  merupakan salah satu tahap dalam membangun sistem rekomendasi dengan pendekatan \emph{collaborative filtering} yang mana model akan memprediksi nilai yang akan didapatkan oleh mahasiswa dari berbagai mata kuliah
+  yang belum pernah diambil sebelumnya oleh mahasiswa. Nilai yang diprediksi tidak hanya berdasarkan dari riwayat pengambilan mata kuliah dari satu orang mahasiswa, namun akan dilakukan pencocokan dengan mahasiwa
+  lain yang memiliki preferensi yang saama. Setelah memprediksi nilai dari sekumpulan mata kuliah nantinya akan diambil \emph{top-N} mata kuliah dengan prediksi nilai tertinggi, setelah itu mata kuliah tersebut dapat direkomendasikan
+  kepada mahasiswa.
 
-  \subsection{Melatih Model}
-  Melakukan pelatihan pada dataset menggunakan yang telah dibuat sebelumnya untuk menemukan pola pada data dan dapat memberikan rekomendasi yang baik kepada mahasiswa.
+  \subsection{\emph{Similarity Measure}}
+  Tahap ini merupakan penerapan untuk pendekatan \emph{content-based filtering} yang mana model akan mencari kemiripan dari suatu mata kuliah, berdasarkan karakteristik yang dimiliki oleh mata kuliah tersebut.
+  Setelah mendapatkan mendapatkan daftar mata kuliah yang mirip dengan input mata kuliah yang diberikan, hasil tersebut akan dikombinasikan dengan hasil rekomendasi dari model dengan pendekatan \emph{collaborative filtering}
+  sehingga menghasilkan sistem rekomendasi dengan pendekatan \emph{hybrid recommender syste}.
 
   \subsection{Evaluasi Model}
-  Evaluasi Model dilakukan dengan melakukan rekomendasi pada data percobaan. Jika dirasa rekomendasi belum cukup baik. Maka perlu melakukan
-  \emph{tuning parameter} pada model seperti unit layer, jumlah layer pada model \emph{Deep Learning}, jumlah iterasi pelatihan dan beberapa parameter lain hingga model dapat memberikan rekomendasi dengan cukup baik.
+  Evaluasi Model dilakukan dengan melakukan rekomendasi pada data percobaan. Jika dirasa rekomendasi belum cukup baik. Maka perlu melakukan \emph{tuning parameter} pada model seperti unit layer,
+  jumlah layer pada model \emph{Deep Learning}, jumlah iterasi pelatihan dan beberapa parameter lain hingga model dapat memberikan rekomendasi dengan cukup baik.
 
-  \subsection{Deploy Model}
+  \subsection{\emph{Retrieval Recommendations}}
   Pada tahap ini model dari sistem rekomendasi yang telah dibuat sebelumnya ada dideploy atau dirilis agar dapat digunakan untuk memberikan rekomendasi melalui sebuah \emph{software}.
   \emph{Software} yang digunakan untuk menampilkan rekomendasi dari mata kuliah yang diberikan oleh model tersebut berupa website sederhana yang bisa menampilkan daftar mata kuliah
   yang direkomendasikan sesuai dengan ID/NRP dari mahasiswa.
 
   \begin{figure} [ht] \centering
-    \includegraphics[width=150mm]{gambar/mockup.png}
+    \includegraphics[width=150mm]{gambar/mockup-1.png}
+    \includegraphics[width=150mm]{gambar/mockup-2.png}
     \caption{Mock Up Tampilan Website Sederhana}
   \end{figure}
+
 \end{adjustwidth}
 
 
