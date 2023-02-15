@@ -21,6 +21,7 @@
 \usepackage[utf8]{inputenc}
 
 % Package lainnya
+\usepackage{fontspec}
 \usepackage{etoolbox} % Mengubah fungsi default
 \usepackage{enumitem} % Pembuatan list
 \usepackage{lipsum} % Pembuatan template kalimat
@@ -31,9 +32,11 @@
 \usepackage{changepage} % Pembuatan teks kolom
 \usepackage{multicol} % Pembuatan kolom ganda
 \usepackage{multirow} % Pembuatan baris ganda
-\usepackage{txfonts} % Font times
 \usepackage{eso-pic}
 \usepackage{anyfontsize}
+
+% Mengubah font (harus menggunakan recipt xelatex)
+\setmainfont{Times New Roman}
 
 % Pengaturan penomoran halaman
 \usepackage{fancyhdr}
