@@ -83,28 +83,19 @@
 % Isi keseluruhan dokumen
 \begin{document}
 % Sampul Bahasa Indonesia
-\newcommand\covercontents{sampul/konten-id.tex}
-\input{sampul/sampul.tex}
-
-% Sampul Bahasa Inggris
-\renewcommand\covercontents{sampul/konten-en.tex}
+\newcommand\covercontents{sampul/konten.tex}
 \input{sampul/sampul.tex}
 
 % Atur ulang penomoran halaman
 \pagenumbering{roman}
 
 % Lembar pengesahan
-\input{pengesahan/pengesahan-ind.tex}
-\newpage
-\input{pengesahan/pengesahan-eng.tex}
+\input{pengesahan/pengesahan.tex}
 \newpage
 
 % Abstrak
-\input{abstrak/abstrak-ind.tex}
+\input{abstrak/abstrak.tex}
 \addcontentsline{toc}{chapter}{ABSTRAK}
-\newpage
-
-\input{abstrak/abstrak-eng.tex}
 \newpage
 
 % Daftar isi
