@@ -21,7 +21,6 @@
 \usepackage[utf8]{inputenc}
 
 % Package lainnya
-\usepackage{fontspec}
 \usepackage{etoolbox} % Mengubah fungsi default
 \usepackage{enumitem} % Pembuatan list
 \usepackage{lipsum} % Pembuatan template kalimat
@@ -32,11 +31,9 @@
 \usepackage{changepage} % Pembuatan teks kolom
 \usepackage{multicol} % Pembuatan kolom ganda
 \usepackage{multirow} % Pembuatan baris ganda
+\usepackage{txfonts} % Font times
 \usepackage{eso-pic}
 \usepackage{anyfontsize}
-
-% Mengubah font (harus menggunakan recipt xelatex)
-\setmainfont{Times New Roman}
 
 % Pengaturan penomoran halaman
 \usepackage{fancyhdr}
@@ -93,12 +90,16 @@
 \pagenumbering{roman}
 
 % Lembar pengesahan
-\input{pengesahan/pengesahan.tex}
+\input{lainnya/pengesahan.tex}
 \newpage
 
 % Abstrak
-\input{abstrak/abstrak.tex}
+\input{lainnya/abstrak.tex}
 \addcontentsline{toc}{chapter}{ABSTRAK}
+\newpage
+
+% URAIAN
+\input{lainnya/uraian.tex}
 \newpage
 
 % Daftar isi
